@@ -24,9 +24,10 @@ namespace Galactica
                       DiameterInMeters = 10,
                       RevolutionPeriodInDays = 10,
                       RotationPeriodInHours = 10,
+                      PlanetType = PlanetType.Giant,
                       MoonList = new List<Moon>
                       {
-                          new Moon{ Id = 1, Name = "Luna", Orbiting = new Planet{ Id = 1, Name = "Mercury" } }
+                          new Moon{ Id = 1, Name = "Luna", Positioning = new Position { x = 12, y = 13 }, Orbiting = new Planet{ Id = 1, Name = "Mercury" } }
                       }
                     },
                     new Planet
@@ -37,9 +38,10 @@ namespace Galactica
                       DiameterInMeters = 20,
                       RevolutionPeriodInDays = 20,
                       RotationPeriodInHours = 20,
+                      PlanetType = PlanetType.Dwarf,
                       MoonList = new List<Moon>
                       {
-                          new Moon{ Id = 2, Name = "Titan", Orbiting = new Planet{ Id = 2, Name = "Venus" } }
+                          new Moon{ Id = 2, Name = "Titan", Positioning = new Position { x = 42, y = 9 }, Orbiting = new Planet{ Id = 2, Name = "Venus" } }
                       }
                     },
                     new Planet
@@ -50,9 +52,10 @@ namespace Galactica
                       DiameterInMeters = 30,
                       RevolutionPeriodInDays = 30,
                       RotationPeriodInHours = 30,
+                      PlanetType = PlanetType.Terrestial,
                       MoonList = new List<Moon>
                       {
-                          new Moon{ Id = 3, Name = "Phobos", Orbiting = new Planet{ Id = 3, Name = "Earth" } }
+                          new Moon{ Id = 3, Name = "Phobos", Positioning = new Position { x = 53, y = 83 }, Orbiting = new Planet{ Id = 3, Name = "Earth" } }
                       }
                     },
                     new Planet
@@ -63,9 +66,10 @@ namespace Galactica
                       DiameterInMeters = 40,
                       RevolutionPeriodInDays = 40,
                       RotationPeriodInHours = 40,
+                      PlanetType = PlanetType.Terrestial,
                       MoonList = new List<Moon>
                       {
-                          new Moon{ Id = 4, Name = "Europe", Orbiting = new Planet{ Id = 4, Name = "Mars" } }
+                          new Moon{ Id = 4, Name = "Europe", Positioning = new Position { x = 12, y = 11 }, Orbiting = new Planet{ Id = 4, Name = "Mars" } }
                       }
                     },
                     new Planet
@@ -76,9 +80,10 @@ namespace Galactica
                       DiameterInMeters = 50,
                       RevolutionPeriodInDays = 50,
                       RotationPeriodInHours = 50,
+                      PlanetType = PlanetType.Giant,
                       MoonList = new List<Moon>
                       {
-                          new Moon{ Id = 5, Name = "Deimos", Orbiting = new Planet{ Id = 5, Name = "Jupiter" } }
+                          new Moon{ Id = 5, Name = "Deimos", Positioning = new Position { x = 51, y = 50 }, Orbiting = new Planet{ Id = 5, Name = "Jupiter" } }
                       }
                     },
                     new Planet
@@ -89,9 +94,10 @@ namespace Galactica
                       DiameterInMeters = 60,
                       RevolutionPeriodInDays = 60,
                       RotationPeriodInHours = 60,
+                      PlanetType = PlanetType.Gas_Giant,
                       MoonList = new List<Moon>
                       {
-                          new Moon{ Id = 6, Name = "Ganymedes", Orbiting = new Planet{ Id = 6, Name = "Saturn" } }
+                          new Moon{ Id = 6, Name = "Ganymedes", Positioning = new Position { x = 203, y = 140 }, Orbiting = new Planet{ Id = 6, Name = "Saturn" } }
                       }
                     },
                     new Planet
@@ -102,9 +108,10 @@ namespace Galactica
                       DiameterInMeters = 70,
                       RevolutionPeriodInDays = 70,
                       RotationPeriodInHours = 70,
+                      PlanetType = PlanetType.Giant,
                       MoonList = new List<Moon>
                       {
-                          new Moon{ Id = 7, Name = "Io", Orbiting = new Planet{ Id = 7, Name = "Uranus" } }
+                          new Moon{ Id = 7, Name = "Io", Positioning = new Position { x = 68, y = 99 }, Orbiting = new Planet{ Id = 7, Name = "Uranus" } }
                       }
                     },
                     new Planet
@@ -115,16 +122,17 @@ namespace Galactica
                       DiameterInMeters = 80,
                       RevolutionPeriodInDays = 80,
                       RotationPeriodInHours = 80,
+                      PlanetType = PlanetType.Dwarf,
                       MoonList = new List<Moon>
                       {
-                          new Moon{ Id = 8, Name = "Mimas", Orbiting = new Planet{ Id = 8, Name = "Neptune" } }
+                          new Moon{ Id = 8, Name = "Mimas", Positioning = new Position { x = 958, y = 86 }, Orbiting = new Planet{ Id = 8, Name = "Neptune" } }
                       }
                     }
                 }
             };
 
             Planet planetRef = new Planet();
-            planetRef.Distance(star);
+            planetRef.ShowAllPlanetsAndMoons(star);
 
         }
     }

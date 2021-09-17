@@ -10,11 +10,10 @@ namespace Galactica
     {
         public Planet Orbiting {  get; set; }
 
-        public double Distance()
+        public double Distance(Planet p, Moon m)
         {
-            double dhasi9dhaiohdioshjo = 0;
-            return dhasi9dhaiohdioshjo;
-            //return this.Orbiting.Distance();
+            double distance = Math.Sqrt(Math.Pow((p.Positioning.x - m.Positioning.x), 2) + Math.Pow((p.Positioning.y - m.Positioning.y), 2));
+            return distance;
         }
     }
 }

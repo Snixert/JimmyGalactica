@@ -17,7 +17,7 @@ namespace Galactica
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public Position Positioning { get; set; }
+        public virtual Position Positioning { get; set; }
         public class Position
         {
             public int x { get; set; }
@@ -25,7 +25,7 @@ namespace Galactica
 
             public override string ToString()
             {
-                return $"({x}, {y})";
+                return $"({x},{y})";
             }
         }
     }
