@@ -12,7 +12,10 @@ namespace Galactica
         public Startype Type { get; set; }
         public double Temperature { get; set; }
         public List<Planet> PlanetList = new List<Planet>();
-        public Position getPosition { get; } = new Position() { x = 0, y = 0 };
+        public override Position Positioning
+        {
+            get { return new Position() { x = 0, y = 0 }; }
+        }
 
     }
 }
